@@ -9,8 +9,13 @@ export interface BuildPaths {
     html: string;
 };
 
+export interface BuildEnv {
+    mode: BuildMode;
+    port: 3000;
+}
 export interface BuildOptions {
     mode: BuildMode;
     paths: BuildPaths;
-    isDev: boolean
+    isDev: boolean;
+    port: 3000;
 }
