@@ -8,7 +8,19 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]  {
             use: [
                 // в деве не будет отдельных css файлов
                 isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-                "css-loader",
+                // "css-loader",
+                {
+                    loader: "css-loader",
+                    options: {
+                        modules: {
+                            auto: (resPath: string) => Boolean(resPath.includes('.module')), // resPath -путь до файла
+                            localIdentName: isDev
+                                ? "[path][name]__[local]"
+                                : "[hash:base64:8]", // обычные файлы
+                        },
+
+                    }
+                },
                 "sass-loader",
             ],
         };
