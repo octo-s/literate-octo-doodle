@@ -2,7 +2,7 @@
 node_modules/
 dist.zip
 dist/
-build/
+./build/
 yarn-error.log
 webpack.user-overrides.js
 Makefile
