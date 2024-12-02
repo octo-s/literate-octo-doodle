@@ -6,8 +6,7 @@ import {classNames} from "shared/classNames/classNames";
 import {AboutPage} from "pages/AboutPage";
 import {MainPage} from "pages/MainPage";
 
-// const githubPrefix = "/literate-octo-doodle"
-const githubPrefix = ""
+const githubPrefix = "/literate-octo-doodle"
 
 const PATHS = {
     main: githubPrefix,
