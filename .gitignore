@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+dist.zip
+dist/
+./build/
+yarn-error.log
+webpack.user-overrides.js
+Makefile
