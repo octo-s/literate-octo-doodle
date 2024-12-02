@@ -6,11 +6,12 @@ import {classNames} from "shared/classNames/classNames";
 import {AboutPage} from "pages/AboutPage";
 import {MainPage} from "pages/MainPage";
 
-const githubPrefix = "/literate-octo-doodle"
+// const githubPrefix = "/literate-octo-doodle"
+const githubPrefix = ""
 
 const PATHS = {
     main: githubPrefix,
-    about: `${githubPrefix}/about`
+    about: `${githubPrefix}/about/`
 }
 
 const App = () => {

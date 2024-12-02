@@ -5,7 +5,10 @@ import {ThemeProvider} from "app/providers/ThemeProvider";
 
 render(
     <div>
-        <BrowserRouter>
+        <BrowserRouter future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+        }}>
             <ThemeProvider>
                 <App />
             </ThemeProvider>
