@@ -9,4 +9,26 @@
   color:  var(--primary-color);
 
   min-height: 100vh;
+  padding: 10px;
+
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 15px;
+  font-weight: 700;
+  color: var(--bg-color);
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+}
+
+.link {
+  margin: 10px;
+  color:  var(--secondary-color);
+}
+
+h1 {
+  margin: 15px;
 }
