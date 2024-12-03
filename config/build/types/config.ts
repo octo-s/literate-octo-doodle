@@ -9,6 +9,7 @@ export interface BuildPaths {
     public: string;
     html: string;
     src: string;
+    notFound: string;
 };
 
 export interface BuildEnv {

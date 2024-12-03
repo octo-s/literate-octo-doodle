@@ -6,6 +6,8 @@ export function buildDevServer(options: BuildOptions):  DevServerConfiguration {
     return {
         port: options.port,
         open: true,
-        historyApiFallback: true // чтобы не было ошибки при обновлении некорневой страницы
+        historyApiFallback: options.isDev ? true : {
+            rewrites: [{ from: /\//, to: '/404.html' }],
+        },
     }
 }
