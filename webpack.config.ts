@@ -5,6 +5,7 @@ import path from "path";
 
 export default (env: BuildEnv) => {
     const mode = env.mode || EBuildMode.development;
+    const PUBLIC_URL = env.public || '/';
     const isDev = mode === EBuildMode.development;
     const PORT = env.port || 3000;
 
@@ -12,7 +13,8 @@ export default (env: BuildEnv) => {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         build: path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
-        src: path.resolve(__dirname, 'src')
+        src: path.resolve(__dirname, 'src'),
+        public: PUBLIC_URL,
     }
 
     const config: webpack.Configuration = buildWebpackConfig({

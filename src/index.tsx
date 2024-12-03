@@ -5,7 +5,9 @@ import {ThemeProvider} from "app/providers/ThemeProvider";
 
 render(
     <div>
-        <BrowserRouter future={{
+        <BrowserRouter
+            basename={process.env.public}
+            future={{
             v7_startTransition: true,
             v7_relativeSplatPath: true,
         }}>

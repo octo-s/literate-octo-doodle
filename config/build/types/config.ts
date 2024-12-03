@@ -6,12 +6,14 @@ export type BuildMode = keyof typeof EBuildMode;
 export interface BuildPaths {
     entry: string;
     build: string;
+    public: string;
     html: string;
     src: string;
 };
 
 export interface BuildEnv {
     mode: BuildMode;
+    public: string;
     port: 3000;
 }
 export interface BuildOptions {

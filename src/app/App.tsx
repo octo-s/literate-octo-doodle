@@ -6,11 +6,9 @@ import {classNames} from "shared/classNames/classNames";
 import {AboutPage} from "pages/AboutPage";
 import {MainPage} from "pages/MainPage";
 
-const githubPrefix = "/literate-octo-doodle"
-
 const PATHS = {
-    main: githubPrefix,
-    about: `${githubPrefix}/about/`
+    main: '/',
+    about: `/about/`
 }
 
 const App = () => {
@@ -23,7 +21,6 @@ const App = () => {
             <Link className="link" to={PATHS.about}>О сайте</Link>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path={'/'} element={<MainPage />} />
                     <Route path={PATHS.main} element={<MainPage />} />
                     <Route path={PATHS.about} element={<AboutPage />} />
                 </Routes>
