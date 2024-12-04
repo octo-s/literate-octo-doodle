@@ -1,4 +1,8 @@
 .Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   width: 100%;
   height: var(--navbar-height);
   padding: var(--padding-m) var(--padding-l);
@@ -9,9 +13,9 @@
 }
 
 .links {
-  text-align: left;
 }
 
 .link {
   margin: 0 var(--padding-m);
+  font: var(--font-l);
 }

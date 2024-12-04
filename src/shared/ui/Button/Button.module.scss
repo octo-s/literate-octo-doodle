@@ -1,0 +1,22 @@
+.Button {
+  cursor: pointer;
+}
+
+.clear {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.action {
+  padding: var(--padding-m) var(--padding-l);
+  border-radius: var(--border-radius);
+  margin: 0 var(--margin-m);
+  font-weight: 700;
+  color: var(--primary-color);
+  background: var(--bg-color);
+  border: none;
+  outline: none;
+}
