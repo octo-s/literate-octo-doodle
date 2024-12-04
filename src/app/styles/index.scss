@@ -9,14 +9,12 @@
   color:  var(--primary-color);
 
   min-height: 100vh;
-  padding: 10px;
-
 }
 
-button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 0 15px;
+.button {
+  padding: var(--padding-m) var(--padding-l);
+  border-radius: var(--border-radius);
+  margin: 0 var(--margin-m);
   font-weight: 700;
   color: var(--bg-color);
   background: var(--primary-color);
@@ -24,11 +22,6 @@ button {
   outline: none;
 }
 
-.link {
-  margin: 10px;
-  color:  var(--secondary-color);
-}
-
 h1 {
-  margin: 15px;
+  margin: var(--margin-m);
 }
