@@ -1,4 +1,4 @@
-{
+export default {
   "changeLanguage": "Сменить язык",
   "language": "EN",
   "main": "Главная",
