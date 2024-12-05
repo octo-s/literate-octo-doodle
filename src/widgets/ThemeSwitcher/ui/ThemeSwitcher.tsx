@@ -2,8 +2,7 @@ import {classNames} from "shared/classNames/classNames";
 import cls from "./ThemeSwitcher.module.scss"
 import React from "react";
 import {ETheme, useTheme} from "app/providers/ThemeProvider";
-import LightIcon from 'shared/assets/icons/theme-light.svg'
-import DarkIcon from 'shared/assets/icons/theme-dark.svg'
+import ThemeSwitchIcon from 'shared/assets/icons/themeSwitch.svg'
 import {Button, EButtonTheme} from "shared/ui/Button/Button";
 
 interface ThemeSwitcherProps {
@@ -17,7 +16,7 @@ export const ThemeSwitcher = ({className}:ThemeSwitcherProps) => {
             theme={EButtonTheme.CLEAR}
             className={classNames(cls.ThemeSwitcher, {}, [className])}
             onClick={toggleTheme}>
-            {theme === ETheme.NORMAL ? <LightIcon/> : <DarkIcon/>}
+            {theme === ETheme.NORMAL ? <ThemeSwitchIcon /> : <ThemeSwitchIcon/>}
         </Button>
     );
 };

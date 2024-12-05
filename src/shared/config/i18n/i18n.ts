@@ -23,7 +23,7 @@ i18n
         debug: IS_DEV,
         resources,
         interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
         },
     });
 
