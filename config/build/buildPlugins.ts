@@ -4,11 +4,13 @@ import {BuildOptions} from "./types/config";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
-export function buildPlugins({paths}: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
 
     return [
         new webpack.DefinePlugin({
-            'process.env.public' : JSON.stringify(paths.public)
+            BASENAME: JSON.stringify(paths.public),
+            IS_DEV: JSON.stringify(isDev),
+
         }),
         new webpack.ProvidePlugin({
             "process": 'process/browser',
