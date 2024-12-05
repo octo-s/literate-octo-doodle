@@ -19,7 +19,6 @@ export const Navbar = ({className}:NavbarProps) => {
                     About
                 </AppLink>
             </div>
-            <ThemeSwitcher />
         </div>
     );
 };

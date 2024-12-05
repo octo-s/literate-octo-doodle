@@ -5,11 +5,10 @@
 
   width: 100%;
   height: var(--navbar-height);
-  padding: var(--padding-m) var(--padding-l);
+  padding: 0 var(--padding-l);
 
   background:  var(--inverted-bg-color);
   color:  var(--inverted-primary-color);
-  margin-bottom: var(--margin-l);
 }
 
 .links {

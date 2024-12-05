@@ -14,3 +14,13 @@
 h1 {
   margin: var(--margin-m);
 }
+
+.content-page {
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: var(--padding-m);
+
+}
