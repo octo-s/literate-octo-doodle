@@ -9,5 +9,6 @@ export function buildDevServer(options: BuildOptions):  DevServerConfiguration {
         historyApiFallback: options.isDev ? true : {
             rewrites: [{ from: /\//, to: '/404.html' }],
         },
+        hot: true
     }
 }
