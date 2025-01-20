@@ -5,12 +5,13 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]  {
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
-            use: [
-        {
-            loader: 'file-loader',
-        },
-    ],
+        use:
+            [
+                {loader: 'file-loader',
+                },
+            ],
     }
+    
 
     const svgLoader = {
         test: /\.svg$/,
@@ -18,26 +19,26 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]  {
     }
 
     const cssLoaders =  {
-            test: /\.s[ac]ss$/i,
-            use: [
-                // в деве не будет отдельных css файлов
-                isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-                // "css-loader",
-                {
-                    loader: "css-loader",
-                    options: {
-                        modules: {
-                            auto: (resPath: string) => Boolean(resPath.includes('.module')), // resPath -путь до файла
-                            localIdentName: isDev
-                                ? "[path][name]__[local]"
-                                : "[hash:base64:8]", // обычные файлы
-                        },
+        test: /\.s[ac]ss$/i,
+        use: [
+            // в деве не будет отдельных css файлов
+            isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+            // "css-loader",
+            {
+                loader: "css-loader",
+                options: {
+                    modules: {
+                        auto: (resPath: string) => Boolean(resPath.includes('.module')), // resPath -путь до файла
+                        localIdentName: isDev
+                            ? "[path][name]__[local]"
+                            : "[hash:base64:8]", // обычные файлы
+                    },
 
-                    }
-                },
-                "sass-loader",
-            ],
-        };
+                }
+            },
+            "sass-loader",
+        ],
+    };
 
     const typescriptLoader = {
         test: /\.tsx?$/,
@@ -53,8 +54,8 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[]  {
             options: {
                 presets: ['@babel/preset-env'],
                 plugins: [
-                   [
-                       "i18next-extract",
+                    [
+                        "i18next-extract",
                         {
                             locales: ['ru', 'en'],
                             "keyAsDefaultValue":true

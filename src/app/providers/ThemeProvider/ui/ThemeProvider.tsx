@@ -6,8 +6,8 @@ const ThemeProvider: FC = ({children}) => {
     const [theme, setTheme] = useState<ETheme>(defaultTheme);
 
     const defaultProps = useMemo(() =>
-            ({theme, setTheme}),
-        [theme]);
+        ({theme, setTheme}),
+    [theme]);
 
     return (
         <ThemeContext.Provider value={defaultProps}>

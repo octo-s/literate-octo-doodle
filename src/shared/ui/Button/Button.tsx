@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
             {...otherProps}
         >
             {children}
-         </button>
+        </button>
     );
 };
 

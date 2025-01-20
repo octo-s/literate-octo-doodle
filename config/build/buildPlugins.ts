@@ -13,7 +13,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
             IS_DEV: JSON.stringify(isDev),
 
         }),
-       new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({
             "process": 'process/browser',
         }),
         new HTMLWebpackPlugin({
