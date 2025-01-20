@@ -1,10 +1,8 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {RoutePath} from "shared/definitions";
 import {classNames} from "shared/classNames/classNames";
 import cls from "./Navbar.module.scss"
 import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import {useTranslation} from "react-i18next";
 interface NavbarProps {
     className?: string;

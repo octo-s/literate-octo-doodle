@@ -7,11 +7,13 @@
   height: var(--navbar-height);
   padding: 0 var(--padding-l);
 
-  background:  var(--inverted-bg-color);
-  color:  var(--inverted-primary-color);
+  color: var(--inverted-primary-color);
+
+  background: var(--inverted-bg-color);
 }
 
 .links {
+  display: flex;
 }
 
 .link {
