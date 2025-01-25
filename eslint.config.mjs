@@ -12,6 +12,7 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   i18next.configs['flat/recommended'],
+
   {
     ignores: ["**/*.config.js"],
     languageOptions: {
