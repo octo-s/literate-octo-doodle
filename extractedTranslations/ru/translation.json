@@ -1,6 +1,9 @@
 {
   "about": "about",
+  "changeLanguage": "changeLanguage",
   "language": "language",
   "main": "main",
-  "notFound": "notFound"
+  "notFound": "notFound",
+  "title": "",
+  "title1": "title1"
 }
