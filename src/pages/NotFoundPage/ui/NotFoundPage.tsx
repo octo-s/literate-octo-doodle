@@ -11,7 +11,9 @@ export const NotFoundPage = ({className}:NotFoundPageProps) => {
     const { t } = useTranslation('notFound');
 
     return (
-        <div className={classNames(cls.NotFoundPage, {}, [className])}>
+        <div className={classNames(cls.NotFoundPage, {}, [className])}
+             style={{ backgroundImage : `url("./images/bubbles.svg")`}}>
+            {/*<BubblesImage/>*/}
             <h1>{t('title')}</h1>
         </div>
     );
