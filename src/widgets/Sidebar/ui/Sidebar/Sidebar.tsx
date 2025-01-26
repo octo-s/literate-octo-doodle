@@ -12,7 +12,6 @@ interface SidebarProps {
     className?: string;
 }
 export const Sidebar = ({className}:SidebarProps) => {
-    const { t } = useTranslation();
     const [collapsed, setCollapsed] = useState(false);
 
     const onToggle = React.useCallback(() => {
