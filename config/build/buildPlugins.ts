@@ -1,6 +1,7 @@
 import webpack from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import {BuildOptions} from "./types/config";
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -32,6 +33,10 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css', //когда будем разбивать файлы на асинхронные
         }),
-        isDev ? new ReactRefreshWebpackPlugin : new webpack.HotModuleReplacementPlugin()
+        isDev ? new ReactRefreshWebpackPlugin : new webpack.HotModuleReplacementPlugin(),
+
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false
+        }),
     ]
 }
