@@ -4,6 +4,9 @@
   "language": "language",
   "main": "main",
   "notFound": "notFound",
+  "reload": "reload",
+  "throw error": "throw error",
+  "throwError": "throwError",
   "title": "",
   "title1": "title1"
 }
