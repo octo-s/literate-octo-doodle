@@ -2,9 +2,9 @@ import webpack from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
 import {BuildOptions} from "./types/config";
 import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+import  MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CopyPlugin from "copy-webpack-plugin";
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
 

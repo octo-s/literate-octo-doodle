@@ -12,7 +12,6 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   i18next.configs['flat/recommended'],
-
   {
     ignores: ["**/*.config.js"],
     languageOptions: {
@@ -40,13 +39,11 @@ export default [
       'no-underscore-dangle': 'off',
       "i18next/no-literal-string": ['error'],
     },
-    overrides: [
-      {
-        files: ['**/src/**/*.test.{ts,tsx}'],
-        rules: {
-          'i18next/no-literal-string': 'off',
-        },
-      },
-    ],
+  },
+  {
+    files: ['**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off',
+    }
   },
 ];

@@ -1,10 +1,11 @@
-import {classNames} from "shared/classNames/classNames";
 import cls from "./Button.module.scss"
 import {ButtonHTMLAttributes, FC} from "react";
+import {classNames} from "../../../shared/classNames/classNames";
 
 export enum EButtonTheme {
     CLEAR = 'clear',
     ACTION = 'action',
+    OUTLINE = 'outline',
 }
 
 export enum EButtonSize {

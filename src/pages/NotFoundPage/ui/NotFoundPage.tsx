@@ -12,8 +12,7 @@ export const NotFoundPage = ({className}:NotFoundPageProps) => {
 
     return (
         <div className={classNames(cls.NotFoundPage, {}, [className])}
-             style={{ backgroundImage : `url("./images/bubbles.svg")`}}>
-            {/*<BubblesImage/>*/}
+            style={{ backgroundImage : `url("./images/bubbles.svg")`}}>
             <h1>{t('title')}</h1>
         </div>
     );

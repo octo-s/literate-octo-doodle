@@ -1,6 +1,12 @@
 .Button {
   cursor: pointer;
+
+  border-radius: var(--border-radius);
+
+  font-weight: 700;
   color: var(--inverted-primary-color);
+
+  background: var(--inverted-bg-color);
 }
 
 .clear {
@@ -8,17 +14,16 @@
   padding: 0;
   border: none;
 
+  color: var(--inverted-primary-color);
+
+  background: var(--bg-color);
   background: none;
   outline: none;
 }
 
 .action {
   border: solid 3px var(--primary-color);
-  border-radius: var(--border-radius);
-
-  font-weight: 700;
   color: var(--primary-color);
-
   background: var(--bg-color);
   outline: none;
 }
@@ -33,4 +38,11 @@
 
 .large {
   padding: var(--padding-l) var(--padding-l);
+}
+
+.outline {
+  padding: 10px 15px;
+  border: solid 3px var(--primary-color);
+  color: var(--primary-color);
+  background: none;
 }

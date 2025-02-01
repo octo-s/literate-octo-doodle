@@ -11,7 +11,9 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:css": "npx stylelint \"**/*.scss\"",
     "lint:css:fix": "npx stylelint \"**/*.scss\" --fix",
-    "unit": "jest --config ./config/jest/jest.config.ts"
+    "unit": "jest --config ./config/jest/jest.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "",
   "license": "ISC",
@@ -20,16 +22,18 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
+    "@chromatic-com/storybook": "^3.2.4",
     "@eslint/js": "^9.18.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
-    "@storybook/addon-actions": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-interactions": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
-    "@storybook/builder-webpack5": "^6.4.19",
-    "@storybook/manager-webpack5": "^6.4.19",
-    "@storybook/react": "^6.4.19",
-    "@storybook/testing-library": "^0.0.9",
+    "@storybook/addon-essentials": "^8.2.0",
+    "@storybook/addon-interactions": "^8.2.0",
+    "@storybook/addon-links": "7.6.20",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-webpack5-compiler-swc": "^2.0.0",
+    "@storybook/blocks": "^8.2.0",
+    "@storybook/react": "^8.2.0",
+    "@storybook/react-webpack5": "^8.2.0",
+    "@storybook/test": "^8.2.0",
     "@svgr/webpack": "^6.5.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -56,6 +60,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.11.2",
     "file-loader": "^6.2.0",
     "gh-pages": "^6.2.0",
     "globals": "^15.14.0",
@@ -73,6 +78,7 @@
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
+    "storybook": "^8.2.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.1",
     "stylelint-config-clean-order": "^7.0.0",
@@ -108,5 +114,10 @@
   "resolutions": {
     "//": "See https://github.com/facebook/create-react-app/issues/11773",
     "react-error-overlay": "6.0.9"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
