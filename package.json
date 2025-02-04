@@ -69,7 +69,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.0",
-    "loki": "^0.28.1",
+    "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.9.2",
     "process": "^0.11.10",
     "react-error-overlay": "6.0.9",
@@ -119,5 +119,20 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
