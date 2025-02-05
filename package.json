@@ -12,9 +12,9 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
-    "test:ui": "npx loki test",
-    "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui": "npx loki test  --host 127.0.0.1 --port 6006",
+    "test:ui:ok": "npx loki approve  --host 127.0.0.1 --port 6006",
+    "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
