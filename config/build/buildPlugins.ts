@@ -7,8 +7,7 @@ import CopyPlugin from "copy-webpack-plugin";
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
-
-    return [
+    const plugins = [
         new webpack.DefinePlugin({
             BASENAME: JSON.stringify(paths.public),
             IS_DEV: JSON.stringify(isDev),
@@ -33,10 +32,14 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css', //когда будем разбивать файлы на асинхронные
         }),
-        isDev ? new ReactRefreshWebpackPlugin : new webpack.HotModuleReplacementPlugin(),
-
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false
-        }),
     ]
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false
+        }))
+    }
+
+    return plugins;
 }
