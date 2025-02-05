@@ -14,7 +14,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test  --host 127.0.0.1 --port 6006",
     "test:ui:ok": "npx loki approve  --host 127.0.0.1 --port 6006",
-    "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static --host 127.0.0.1 --port 600",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static --host 127.0.0.1 --port 6006",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
@@ -72,7 +72,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.0",
-    "loki": "^0.35.1",
+    "loki": "^0.28.1",
     "mini-css-extract-plugin": "^2.9.2",
     "process": "^0.11.10",
     "react-error-overlay": "6.0.9",
