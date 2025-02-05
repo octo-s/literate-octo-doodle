@@ -10,7 +10,7 @@ export interface BuildPaths {
     html: string;
     src: string;
     notFound: string;
-};
+}
 
 export interface BuildEnv {
     mode: BuildMode;
