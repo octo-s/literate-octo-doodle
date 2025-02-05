@@ -6,5 +6,5 @@ dist/
 yarn-error.log
 webpack.user-overrides.js
 Makefile
-
+/storybook-static
 *storybook.log
