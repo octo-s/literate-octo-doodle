@@ -14,7 +14,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test  --host 127.0.0.1 --port 6006",
     "test:ui:ok": "npx loki approve  --host 127.0.0.1 --port 6006",
-    "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static",
+    "test:ui:ci": "brew install graphicsmagick && npx loki --requireReference update --reactUri file:./storybook-static --host 127.0.0.1 --port 600",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
