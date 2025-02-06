@@ -13,7 +13,6 @@ export const NotFoundPage = ({className}:NotFoundPageProps) => {
     return (
         <div className={classNames(cls.NotFoundPage, {}, [className])}>
             {/* todo add background */}
-            {/* style={{ backgroundImage : `url("./images/bubbles.svg")`}}> */}
             <h1>{t('title')}</h1>
         </div>
     );
